@@ -1,0 +1,26 @@
+﻿@model DxValidationApplication.Models.ModelValidation.DataViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("DoValidate", "ModelValidation", FormMethod.Post))
+{
+    @Html.DevExpress().TextBox(
+            settings => 
+            {
+                settings.Name = "Data";
+                settings.ShowModelErrors = true;
+                settings.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+            }
+    ).Bind(Model.Data).GetHtml()
+
+     @Html.DevExpress().Button(
+        settings => 
+        {
+            settings.Name = "SubmitBtn";
+            settings.Text = "Submit";
+            settings.UseSubmitBehavior = true;
+        }
+    ).GetHtml()
+}
