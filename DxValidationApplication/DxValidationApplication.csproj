@@ -81,6 +81,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-1.10.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.1.js" />
+    <Content Include="Scripts\jquery-1.10.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
@@ -88,6 +96,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientModelValidationController.cs" />
     <Compile Include="Controllers\ModelValidationController.cs" />
+    <Compile Include="Controllers\UnobtrusiveClientModelValidationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,6 +110,10 @@
     <Content Include="Views\ModelValidation\Info.cshtml" />
     <Content Include="Views\ClientModelValidation\Info.cshtml" />
     <Content Include="Views\ClientModelValidation\Play.cshtml" />
+    <Content Include="Scripts\jquery-1.10.1.min.map" />
+    <Content Include="Views\UnobtrusiveClientModelValidation\Info.cshtml" />
+    <Content Include="Views\UnobtrusiveClientModelValidation\Play.cshtml" />
+    <Content Include="Views\Shared\_LayoutUnobtrusive.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,7 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

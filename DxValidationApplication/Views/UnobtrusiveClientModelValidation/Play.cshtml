@@ -1,0 +1,28 @@
+﻿@model DxValidationApplication.Models.ModelValidation.DataViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutUnobtrusive.cshtml";
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+
+@using (Html.BeginForm("DoValidate", "UnobtrusiveClientModelValidation", FormMethod.Post))
+{
+    @Html.DevExpress().TextBox(
+            settings =>
+            {
+                settings.Name = "Data";
+                settings.ShowModelErrors = true;
+                settings.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+            }
+    ).Bind(Model.Data).GetHtml()
+
+    @Html.DevExpress().Button(
+        settings =>
+        {
+            settings.Name = "SubmitBtn";
+            settings.Text = "Submit";
+            settings.UseSubmitBehavior = true;
+        }
+    ).GetHtml()
+}
