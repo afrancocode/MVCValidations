@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClientModelValidationController.cs" />
     <Compile Include="Controllers\ModelValidationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -98,6 +99,8 @@
     <Content Include="packages.config" />
     <Content Include="Views\ModelValidation\Play.cshtml" />
     <Content Include="Views\ModelValidation\Info.cshtml" />
+    <Content Include="Views\ClientModelValidation\Info.cshtml" />
+    <Content Include="Views\ClientModelValidation\Play.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
